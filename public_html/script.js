@@ -6,7 +6,14 @@
 
 
 $("document").ready(function (){
-    $(".whatever").css("background-color", "lavender");
+    $(".somestuff").css("background-color", "pink");
+    $("p:last-child").css("color", "red");
+    
+    $("#alertButton").bind("click", alertButtonClick);
 });
+
+function alertButtonClick(){
+    alert("You clicked my button")
+}
 
 
