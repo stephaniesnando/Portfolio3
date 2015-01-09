@@ -10,10 +10,26 @@ $("document").ready(function (){
     $("p:last-child").css("color", "red");
     
     $("#alertButton").bind("click", alertButtonClick);
+            
+    $("h1").bind("mouseover", mouseOverMe).bind("mouseout", mouseOutMe);
+   
+    $("h1").bind("click", mouseClick);
+
 });
 
 function alertButtonClick(){
     alert("You clicked my button")
+}
+
+function mouseOverMe(){
+    $("h1").html("blah blah");
+}
+function  mouseOutMe(){
+    $("h1").html("whatever forever");
+}
+
+function mouseClick(){
+    $("p").html("you clicked..");
 }
 
 
