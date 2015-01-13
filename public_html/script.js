@@ -20,6 +20,10 @@ $("document").ready(function (){
     $('#randPara').bind('click', addAPara);
     
     $('#removePara').bind('click', removeAPara);
+    
+    $("button").click(function(){
+    $("div").animate({left:'250px'});
+  });
 
 });
 
