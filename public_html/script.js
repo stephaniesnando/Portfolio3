@@ -9,6 +9,8 @@ $("document").ready(function (){
     $(".somestuff").css("background-color", "pink");
     $("p:last-child").css("color", "red");
     
+    $('#superHumans').accordion({header: "h3"});
+    
     $("#alertButton").bind("click", alertButtonClick);
             
     $("h1").bind("mouseover", mouseOverMe).bind("mouseout", mouseOutMe);
@@ -21,11 +23,24 @@ $("document").ready(function (){
     
     $('#removePara').bind('click', removeAPara);
     
+    $('#show').css('visibility', 'hidden');
+    
+    $('#hide').bind('click', hideThePage);
+    $('show').bind('click', showThePage);
+    
     $("button").click(function(){
     $("div").animate({left:'250px'});
   });
 
 });
+
+function hideThePage(){
+    $("div").hide("slide", {}, 2500);
+}
+
+function showThePage(){
+    $("div").show("fold", {}, 2500);
+}
 
 function removeAPara(){
     $('#randPara p:last').remove();
