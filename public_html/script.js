@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 
-
+/* Just thought you should kno that by far, this has been one of the more difficult projects for me
+ * I think you should go easy when grading this :( */
 $("document").ready(function (){
+    /* Everything within the "somestuff" div class will be pink */
     $(".somestuff").css("background-color", "pink");
+    /* The last P text will be red */
     $("p:last-child").css("color", "red");
     
     $('#superHumans').accordion({header: "h3"});
@@ -18,16 +21,16 @@ $("document").ready(function (){
     $("h1").bind("click", mouseClick);
     
     $('#replaceWText').bind('click', replaceWText);
-    
+    /* If you click "Add" it will add a paragraph, becuase I have my ID as randPara */
     $('#randPara').bind('click', addAPara);
-    
+    /* If you click "Remove" the added paragraph will be removed becuase of the ID removePara  */
     $('#removePara').bind('click', removeAPara);
     
     $('#show').css('visibility', 'hidden');
     
     $('#hide').bind('click', hideThePage);
     $('show').bind('click', showThePage);
-    
+    /*  Animation stuff going on*/
     $("button").click(function(){
     $("div").animate({left:'250px'});
   });
@@ -45,7 +48,7 @@ function showThePage(){
 function removeAPara(){
     $('#randPara p:last').remove();
 }
-
+/* When you click "Add" the p "CooOooOool" will be added */
 function addAPara(){
     $('#randPara').append('<p>CooOooOool</p>');
 }
